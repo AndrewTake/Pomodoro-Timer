@@ -1,0 +1,326 @@
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+  
+
+/* NAVBAR */
+nav {
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #dddddd;
+    font-family: "Aresenal", sans-serif;
+    position: sticky;
+    top: 0px;
+}
+
+.nav_link_list {
+    display: flex;
+    top: 1em;
+}
+
+.nav_link_a {
+    margin: 0px;
+    color: #171a1b;
+    font-weight: 700;
+    display: flex;
+    justify-content: left;
+    color: #000000;
+    padding: 14px 16px;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: opacity 300ms ease;
+}
+
+.nav_link {
+    list-style-type: none;
+    padding-left: 1em;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* TIMERS */
+html {
+    box-sizing: border-box;
+}
+  
+:root {
+    --study: hsl(0, 90%, 72%);
+    --short_break: hsl(48, 67%, 49%);
+    --long_break: hsl(105, 77%, 66%);
+}
+  
+.timer_body {
+    background-color: var(--study);
+    transition: background-color 1s ease;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    user-select: none;
+}
+  
+.timer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+}
+
+.timer2 {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+}
+  
+.clock {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 16rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+}
+
+span {
+    font-size: 16rem;
+}
+  
+.mode-button {
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    height: 30px;
+    cursor: pointer;
+    box-shadow: none;
+    font-weight: 300;
+    color: black;
+    border: 2px solid transparent;
+    margin: 0px;
+    border-radius: 5px;
+    padding: 2px 12px;
+    background: none;
+}
+  
+.mode-button.active {
+    border-color: black;
+}
+  
+.main-button {
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+    box-shadow: rgb(235, 235, 235) 0px 6px 0px;
+    font-size: 27px;
+    height: 55px;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    width: 200px;
+    background-color: white;
+    border-width: initial;
+    border-style: none;
+    margin: 20px 0px 0px;
+    padding: 0px 12px;
+    border-radius: 4px;
+    transition: color 0.5s ease-in-out 0s;
+}
+  
+button:focus, button:active {
+    outline: none;
+}
+  
+.main-button.active {
+    transform: translateY(6px);
+    box-shadow: none;
+    outline: none;
+}
+  
+.hidden {
+    display: none;
+}
+  
+@media screen and (max-width: 550px) {
+    .clock {
+      font-size: 8rem;
+    }
+}
+
+/* CUSTOM TIMERS */
+.customization {
+    position: absolute;
+    top: 45%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+input[type=text], input[type=password] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: medium;
+}
+
+.form {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.custom-title {
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+    height: 30px;
+    font-weight: 300;
+    color: black;
+    margin: 0px;
+    padding: 50px;
+}
+
+.login-page {
+    height: 100vh;
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* CALENDAR */
+.calendar button {
+    border: none;
+    background-color: #e7e7e7;
+    font-size: 15px;
+}
+
+.calendar select {
+    appearance: none;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 40px;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.calendar select::-ms-expand{
+    display: none;
+}
+
+.calendar input {
+    border: none;
+    appearance: none;
+}
+
+.calendar input:focus{
+    outline: none;
+}
+
+option {
+    background: #fafafa;
+    font-size: 20px;
+}
+
+.calendar {
+    width: 75%;
+    padding: 40px 10px;
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#cal-head, #cal-body {
+    display: flex;
+    justify-content: space-around;
+    border: 5px solid #ddd;
+    border-bottom: 2.5px;
+    padding: 20px;
+    background-color: #d5d5d5;
+}
+
+#cal-head > * {
+    padding: 8px 50px;
+    width: auto;
+}
+
+#cal-body {
+    padding: 30px;
+    background-color: #f2f2f2;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #cecece;
+    text-align: center;
+}
+
+tbody {
+    height: 250px;
+    text-align: start;
+    vertical-align: top;
+    background-color: #fff;
+}
+
+td {
+    border: 2px dotted #bbb;
+    font-size: 18px;
+    height: 90px;
+    padding: 10px;
+}
+
+.days {
+    font-size: 30px;
+}
+
+#year {
+    background-color: #FAFAFA;
+    font-size: 30px;
+}
+
+.popup-container {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 90%;
+}
+
+#btn-save, #btn-cancel, #timer-options { 
+background-color: #f2f2f2;
+border: none;
+color: black;
+padding: 10px 25px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 14px;
+}
+
+/* LOGIN */
+#loginpage {
+    text-align: center;
+}
+
+.loginbtn, .signupbtn {
+    border: none;
+}
